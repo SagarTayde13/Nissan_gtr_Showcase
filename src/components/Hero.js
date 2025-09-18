@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 // import heroBg from "../images/pexels-albinberlin-919073.jpg"; 
-import heroBg2 from "../images/gtrrrrr.jpg";// Replace with GTR car image
+// import heroBg2 from "../public/images/gtrrrrr.jpg";// Replace with GTR car image
 import { Link } from "react-scroll";
 
 function Hero() {
   return (
     <section id="NissanPage1"
       className="h-screen w-full flex flex-col relative bg-black text-white overflow-hidden"
-      style={{ backgroundImage: `url(${heroBg2})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      style={{ backgroundImage: `url(/heroBg2)`, backgroundSize: "cover", backgroundPosition: "center" }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/30"></div>

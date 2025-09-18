@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import carImg from "../images/image.png"; // Replace with your actual car image
+// import carImg from "../images/image.png"; // Replace with your actual car image
 
 function ProductSeries() {
   return (
@@ -72,7 +72,7 @@ function ProductSeries() {
 
         {/* Right Side - Car Image */}
         <motion.img
-          src={carImg}
+          src="/images/image.png"
           alt="Car Model"
           className="rounded-2xl ]"
           initial={{ opacity: 0, x: 100 }}
