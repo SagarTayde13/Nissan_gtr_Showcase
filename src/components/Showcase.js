@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-// import carImg from "../images/image.png"; // Replace with your actual car image
+import carImg from "../images/image.png"; 
 
 function ProductSeries() {
   return (
@@ -7,7 +7,7 @@ function ProductSeries() {
       {/* Subtle red gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-black to-black -z-10"></div>
       <div className="absolute top-40 -left-32 w-96 h-96 bg-red-600/20 blur-3xl rounded-full -z-10"></div>
-
+z
       {/* Heading */}
       <h2 className="text-5xl font-extrabold text-center mb-12">
         <span className="text-red-600">PRODUCT</span> SERIES
@@ -72,7 +72,7 @@ function ProductSeries() {
 
         {/* Right Side - Car Image */}
         <motion.img
-          src="/images/image.png"
+          src={`url(${carImg})`}
           alt="Car Model"
           className="rounded-2xl ]"
           initial={{ opacity: 0, x: 100 }}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 // import heroBg from "../images/pexels-albinberlin-919073.jpg"; 
-import heroBg2 from "..//gtrrrrr.jpg";// Replace with GTR car image
+import heroBg2 from "../images/gtrrrrr.jpg";// Replace with GTR car image
 import { Link } from "react-scroll";
 
 function Hero() {
@@ -47,6 +47,7 @@ function Hero() {
 
 
         {/* Right side */}
+
 
         <div className="flex items-center space-x-6">
           <button className="text-sm hover:text-gray-300">EN | JP</button>
