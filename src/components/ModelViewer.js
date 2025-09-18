@@ -2,13 +2,12 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, useGLTF } from "@react-three/drei";
 
-function Model({ url,color }) {
+function Model({ url }) {
   const { scene } = useGLTF(url);
-  
   return (
     <primitive
   object={scene}
-  scale={0.09}
+  scale={0.1}
   position={[0, -1.2, 0]}
   rotation={[0, Math.PI, 0]}
 />
