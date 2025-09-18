@@ -72,7 +72,7 @@ z
 
         {/* Right Side - Car Image */}
         <motion.img
-          src={`url(${carImg})`}
+          src="/images/carImg"
           alt="Car Model"
           className="rounded-2xl ]"
           initial={{ opacity: 0, x: 100 }}
