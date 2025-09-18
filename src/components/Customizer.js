@@ -33,9 +33,9 @@ function Customizer() {
     
 
       <div className="flex gap-4 mt-6">
-        <button onClick={() => setCarColor("red")} className="px-4 py-2 bg-red-600 rounded-full">Red</button>
-        <button onClick={() => setCarColor("black")} className="px-4 py-2 bg-gray-700 rounded-full">Black</button>
-        <button onClick={() => setCarColor("silver")} className="px-4 py-2 bg-gray-300 text-black rounded-full">Silver</button>
+        <button className="px-4 py-2 bg-red-600 rounded-full">Red</button>
+        <button className="px-4 py-2 bg-gray-700 rounded-full">Black</button>
+        <button className="px-4 py-2 bg-gray-300 text-black rounded-full">Silver</button>
       </div>
     </section>
   );

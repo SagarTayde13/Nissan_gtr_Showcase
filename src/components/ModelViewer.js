@@ -1,15 +1,10 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, useGLTF } from "@react-three/drei";
-import { color } from "framer-motion";
 
 function Model({ url,color }) {
   const { scene } = useGLTF(url);
-  scene.traverse((child) => {
-    if (child.isMesh) {
-      child.material.color.set(color);
-    }
-  });
+  
   return (
     <primitive
   object={scene}
@@ -29,7 +24,7 @@ export default function ModelViewer({ modelPath }) {
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <Suspense fallback={null}>
-          <Model url={modelPath} color={color} />
+          <Model url={modelPath} />
           <Environment preset="city" />
         </Suspense>
         <OrbitControls enableZoom={true} />
