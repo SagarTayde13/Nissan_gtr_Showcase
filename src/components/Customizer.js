@@ -5,14 +5,14 @@ import { useInView } from "react-intersection-observer";
 function Customizer() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3, // fire when ~30% of the section is visible
+    threshold: 0.3, 
   });
-
+  const [carColor, setCarColor] = useState("silver");
   const [key, setKey] = useState(0);
 
   useEffect(() => {
     if (inView) {
-      setKey((prev) => prev + 1); // reset ModelViewer when section comes into view
+      setKey((prev) => prev + 1);
     }
   }, [inView]);
 
@@ -29,12 +29,13 @@ function Customizer() {
       <h2 className="text-4xl font-bold mb-6">360° View</h2>
 
       {/* Load your .glb model here */}
-      <ModelViewer key={key} modelPath="/models/nissan3d.glb" />
+      <ModelViewer modelPath={`${process.env.PUBLIC_URL}/models/nissan3d.glb`} />
+    
 
       <div className="flex gap-4 mt-6">
-        <button className="px-4 py-2 bg-red-600 rounded-full">Red</button>
-        <button className="px-4 py-2 bg-gray-700 rounded-full">Black</button>
-        <button className="px-4 py-2 bg-gray-300 text-black rounded-full">Silver</button>
+        <button onClick={() => setCarColor("red")} className="px-4 py-2 bg-red-600 rounded-full">Red</button>
+        <button onClick={() => setCarColor("black")} className="px-4 py-2 bg-gray-700 rounded-full">Black</button>
+        <button onClick={() => setCarColor("silver")} className="px-4 py-2 bg-gray-300 text-black rounded-full">Silver</button>
       </div>
     </section>
   );
